@@ -1,0 +1,45 @@
+{
+    "bioData":[
+		{
+			"name": "Johan",
+			"age": 24,
+			"place": "America"
+		},
+		{
+			"name": "Albert",
+			"age":32,
+			"place": "Canada"
+		},
+        {
+            "name": "Charlie",
+            "age": 34,
+            "place": "Berlin"
+        },
+        {
+            "name": "Ben",
+            "age": 10,
+            "place": "India"
+        },
+        {
+            "name": "Daniel",
+            "age": 40,
+            "place": "yemen"
+        },
+        {
+            "name": "Alex",
+            "age": 45,
+            "place": "Germany"
+        },
+        {
+            "name": "Benjamin",
+            "age": 50,
+            "place": "Italy"
+        },
+        {
+            "name": "Frankey",
+            "age": 40,
+            "place": "Zambia"
+        },
+        ]
+}
+

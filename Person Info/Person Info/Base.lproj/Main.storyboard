@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PEi-XX-YAg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DMQ-70-J6U">
+            <objects>
+                <navigationController id="PEi-XX-YAg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wZH-qp-3y8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="M8w-sl-O7W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJH-xg-yuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000" y="92"/>
+        </scene>
+        <!--PersonTable-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Person_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2mP-6p-WuL">
+                                <rect key="frame" x="0.0" y="162" width="414" height="651"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.80009632537629471" blue="0.75420098408086422" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Type the PLACE to search for " showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AkN-JA-cC5">
+                                <rect key="frame" x="0.0" y="128" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nny-rN-8fs"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2yj-g2-TIp"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHB-TN-fVk">
+                                <rect key="frame" x="16" y="93" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Add / Edit "/>
+                                    <segment title="Search"/>
+                                    <segment title="Sort"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="yvG-jA-GeV"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2mP-6p-WuL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="795-bn-uJD"/>
+                            <constraint firstItem="2mP-6p-WuL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CCJ-Td-6wQ"/>
+                            <constraint firstItem="AkN-JA-cC5" firstAttribute="top" secondItem="pHB-TN-fVk" secondAttribute="bottom" constant="4" id="HDd-OE-3BM"/>
+                            <constraint firstItem="2mP-6p-WuL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HK9-Mf-KIK"/>
+                            <constraint firstItem="2mP-6p-WuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MaW-2m-ox9"/>
+                            <constraint firstItem="pHB-TN-fVk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OeO-jH-zeh"/>
+                            <constraint firstItem="AkN-JA-cC5" firstAttribute="trailing" secondItem="2mP-6p-WuL" secondAttribute="trailing" id="OqL-BI-YzB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pHB-TN-fVk" secondAttribute="trailing" constant="24" id="Sy4-JV-aWA"/>
+                            <constraint firstItem="AkN-JA-cC5" firstAttribute="leading" secondItem="2mP-6p-WuL" secondAttribute="leading" id="hWd-1a-hbS"/>
+                            <constraint firstItem="pHB-TN-fVk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="xFT-ii-5ya"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="PersonTable" id="CCd-gE-Gmm">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="NMj-IQ-tkC">
+                            <connections>
+                                <action selector="editButton:" destination="BYZ-38-t0r" id="Aat-MB-Ppv"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Add" image="plus" catalog="system" id="JzO-oG-Mq2">
+                                <connections>
+                                    <action selector="addButton:" destination="BYZ-38-t0r" id="6Xd-MR-5VS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="BRQ-HG-bNB">
+                                <connections>
+                                    <action selector="refreshButton:" destination="BYZ-38-t0r" id="zmj-OZ-c7h"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addbutton" destination="JzO-oG-Mq2" id="rbe-xg-L1K"/>
+                        <outlet property="editbutton" destination="NMj-IQ-tkC" id="m9Y-GW-Jei"/>
+                        <outlet property="refreshbutton" destination="BRQ-HG-bNB" id="yRG-RV-oSh"/>
+                        <outlet property="searchBar" destination="AkN-JA-cC5" id="zU4-8A-l8D"/>
+                        <outlet property="segments" destination="pHB-TN-fVk" id="BEk-bA-uTU"/>
+                        <outlet property="tablelist" destination="2mP-6p-WuL" id="Mtd-Ze-wiy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.47826086956522" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
